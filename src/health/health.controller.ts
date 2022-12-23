@@ -14,7 +14,7 @@ export class HealthCheckController {
     checkHealth() {
         return this.healthCheckService.check([
             () => this.http.pingCheck('Basic Check', 'http://localhost:3000'),
-            () => this.db.pingCheck('library')
+            () => this.db.pingCheck('database')
         ]);
     }
 }
