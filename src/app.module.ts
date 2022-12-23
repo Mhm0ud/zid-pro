@@ -16,6 +16,7 @@ import { ConfigModule } from '@nestjs/config';
         username: process.env.DB_USER || 'root',
         password: process.env.DB_PASSWORD || 'test',
         database: process.env.DB_NAME || 'nest',
+        poolSize: 10,
         entities: [],
         synchronize: false
       })
