@@ -1,0 +1,13 @@
+kind: ConfigMap 
+apiVersion: v1 
+metadata:
+  name: {{ .Release.Name }}-configmap 
+data:
+  # Configuration values can be set as key-value properties
+  DATABASE_LOGGING: "true"
+  DB_HOST: {{ .Release.Name }}-mysql
+  DB_PORT: "3306"
+  DB_NAME: my_database
+  DB_USER: root
+  DB_PASSWORD: test
+  DATABASE_SYNC: "true"
